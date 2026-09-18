@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Pocket DJ | AI-Powered Musical Intelligence</title>
+
+  <meta name="description"
+        content="My Pocket DJ is an AI-first music technology platform developing musical intelligence for proactive DJ guidance, track selection and professional-sounding transitions.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: #0d0e10;
+      color: #eceef1;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid #24262a;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      font-size: 18px;
+    }
+
+    .status {
+      color: #c9a227;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: #c9a227;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      max-width: 900px;
+    }
+
+    .hero h2 {
+      margin-top: 28px;
+      font-size: clamp(23px, 3vw, 36px);
+      font-weight: 400;
+      color: #b8bbc2;
+      max-width: 800px;
+    }
+
+    .hero p {
+      margin-top: 30px;
+      max-width: 720px;
+      font-size: 19px;
+      color: #92969e;
+    }
+
+    .statement {
+      margin-top: 45px;
+      padding: 25px 28px;
+      border-left: 3px solid #c9a227;
+      background: #15171a;
+      max-width: 760px;
+      font-size: 21px;
+    }
+
+    section {
+      padding: 90px 0;
+      border-top: 1px solid #24262a;
+    }
+
+    h3 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 25px;
+      letter-spacing: -1.5px;
+    }
+
+    .section-intro {
+      color: #a2a6ad;
+      max-width: 760px;
+      font-size: 18px;
+      margin-bottom: 45px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #15171a;
+      border: 1px solid #292c31;
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .card-number {
+      color: #c9a227;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .card h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #8f949c;
+    }
+
+    .three-ways {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .way {
+      border-top: 2px solid #c9a227;
+      background: #15171a;
+      padding: 30px;
+    }
+
+    .way h4 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .way p {
+      color: #93979f;
+    }
+
+    .principle {
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .principle p {
+      font-size: clamp(31px, 5vw, 58px);
+      line-height: 1.15;
+      font-weight: 600;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .gold {
+      color: #c9a227;
+    }
+
+    .development {
+      background: #121417;
+    }
+
+    .pipeline {
+      margin-top: 35px;
+      color: #c8cbd0;
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    .identity {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 12px;
+      max-width: 700px;
+      margin-top: 35px;
+    }
+
+    .identity strong {
+      color: #7f848d;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 60px 0;
+      border-top: 1px solid #24262a;
+      color: #737780;
+      font-size: 14px;
+    }
+
+    footer .brand {
+      color: #eceef1;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .identity {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="logo">MY POCKET DJ</div>
+    <div class="status">IN DEVELOPMENT</div>
+  </div>
+</nav>
+
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">AI-First Music Technology</div>
+
+    <h1>
+      Musical intelligence.<br>
+      In your pocket.
+    </h1>
+
+    <h2>
+      Professional DJ thinking without the professional DJ learning curve.
+    </h2>
+
+    <p>
+      My Pocket DJ is an AI-first music technology platform currently
+      in development. It is designed to help everyday music lovers
+      create professional-sounding DJ mixes through proactive musical
+      intelligence.
+    </p>
+
+    <div class="statement">
+      <strong>
+        “Given what you're playing now, here are the three best ways
+        you can go next.”
+      </strong>
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">The Idea</div>
+
+    <h3>The AI doesn't just give you DJ tools. It understands the music.</h3>
+
+    <p class="section-intro">
+      Traditional DJ software provides decks, waveforms, BPM,
+      effects and cue points—but still expects the user to know
+      what to play next, when to transition and how to make that
+      transition work musically.
+    </p>
+
+    <p class="section-intro">
+      My Pocket DJ is being developed around a different approach:
+      put the complexity inside the intelligence layer and give the
+      user simple, musically meaningful choices.
+    </p>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">Musical Intelligence Layer</div>
+
+    <h3>Understand what's happening inside the music.</h3>
+
+    <p class="section-intro">
+      Rather than treating a track as a fixed BPM, key and genre,
+      My Pocket DJ is designed to build a time-aligned understanding
+      of how the music evolves.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-number">01</div>
+        <h4>Structure</h4>
+        <p>
+          Understand musical sections and how a track changes
+          through time.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">02</div>
+        <h4>Rhythm & Tempo</h4>
+        <p>
+          Analyze rhythmic relationships and timing relevant
+          to DJ transitions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">03</div>
+        <h4>Harmony</h4>
+        <p>
+          Reason about harmonic relationships between musical
+          moments—not simply track labels.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">04</div>
+        <h4>Energy & Mood</h4>
+        <p>
+          Follow changes in intensity, dynamics and emotional
+          character throughout the music.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">Proactive AI</div>
+
+    <h3>Three ways forward.</h3>
+
+    <p class="section-intro">
+      Instead of making the user search through hundreds of tracks,
+      the AI is designed to recommend a small number of musically
+      meaningful directions based on what is happening right now.
+    </p>
+
+    <div class="three-ways">
+
+      <div class="way">
+        <h4>Keep the vibe</h4>
+        <p>
+          Maintain the current musical character, mood and energy.
+        </p>
+      </div>
+
+      <div class="way">
+        <h4>Build the energy</h4>
+        <p>
+          Move naturally toward something stronger and more intense.
+        </p>
+      </div>
+
+      <div class="way">
+        <h4>Change direction</h4>
+        <p>
+          Deliberately shift the mood, style or musical character.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">Transition Intelligence</div>
+
+    <h3>Not only what comes next. When and how.</h3>
+
+    <p class="section-intro">
+      Music recommendation is only part of the problem.
+      DJing also requires understanding when a transition should
+      begin, where the next track should enter and whether the
+      musical sections will work together.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h4>What should come next?</h4>
+        <p>
+          Evaluate possible tracks against the evolving musical context.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>When should we transition?</h4>
+        <p>
+          Identify musically meaningful transition windows rather
+          than relying on a single fixed point.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>How should they connect?</h4>
+        <p>
+          Reason about structure, energy, rhythm and harmony to
+          guide the transition.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="principle">
+  <div class="container">
+
+    <p>
+      <span class="gold">Simple for the user.</span><br>
+      Sophisticated underneath.
+    </p>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">Who It's For</div>
+
+    <h3>For people who love music—not only professional DJs.</h3>
+
+    <p class="section-intro">
+      My Pocket DJ is being designed for music lovers who know
+      what sounds good but may not understand professional DJ
+      terminology, harmonic mixing, phrasing or complex DJ software.
+    </p>
+
+    <p class="section-intro">
+      The goal is professional-quality musical decision support
+      through an interface that remains approachable for beginners.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="development">
+  <div class="container">
+
+    <div class="eyebrow">Current Status</div>
+
+    <h3>Currently in active development.</h3>
+
+    <p class="section-intro">
+      Development is currently focused on building and validating
+      the underlying musical intelligence architecture and the
+      interaction model that will expose that intelligence to users.
+    </p>
+
+    <div class="pipeline">
+      Time-aligned musical analysis<br>
+      ↓<br>
+      Musical-state representation<br>
+      ↓<br>
+      Transition opportunity detection<br>
+      ↓<br>
+      Compatibility reasoning<br>
+      ↓<br>
+      Next-track intelligence<br>
+      ↓<br>
+      Proactive AI guidance
+    </div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="eyebrow">About</div>
+
+    <h3>My Pocket DJ</h3>
+
+    <p class="section-intro">
+      My Pocket DJ is an early-stage AI music technology project
+      developing an intelligent layer between music analysis and
+      real-world DJ decision-making.
+    </p>
+
+    <div class="identity">
+
+      <strong>Product</strong>
+      <span>My Pocket DJ</span>
+
+      <strong>Category</strong>
+      <span>AI · Music Technology · DJ Software</span>
+
+      <strong>Development Stage</strong>
+      <span>Early Stage · Product in Development</span>
+
+      <strong>Website</strong>
+      <span>pocketaidj.com</span>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="principle">
+  <div class="container">
+
+    <p>
+      You choose the music.<br>
+      <span class="gold">AI understands the moment.</span><br>
+      Together, you make the mix.
+    </p>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    <div class="brand">MY POCKET DJ</div>
+    <p>AI-powered musical intelligence.</p>
+    <p style="margin-top:10px;">
+      Product currently in development.
+    </p>
+    <p style="margin-top:20px;">
+      © 2026 My Pocket DJ. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
